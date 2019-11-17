@@ -1,0 +1,9 @@
+{
+	"auth": {
+		"firstproject0366e80c": {
+			"service": "Cognito",
+			"providerPlugin": "awscloudformation",
+			"dependsOn": []
+		}
+	}
+}
