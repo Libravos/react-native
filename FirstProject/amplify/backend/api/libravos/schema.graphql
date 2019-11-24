@@ -1,0 +1,14 @@
+type User @model @auth(rules: [{allow: owner}]){
+  id: ID!
+  firstName: String!
+  lastName: String!
+  phoneModel: String!
+  age: Int!
+  employmentStatus: Boolean
+  postalCode: String
+  rate: Int
+}
+
+type Query {
+  me: User
+}

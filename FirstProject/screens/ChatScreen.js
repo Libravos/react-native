@@ -29,7 +29,7 @@ export default class ChatScreen extends React.Component {
 
   getRasaResponse(message){
         console.log(message)
-      return fetch('http://3.15.142.77:5005/webhooks/rest/webhook',
+      return fetch('http://40.71.20.54:80/webhooks/rest/webhook',
       {
         method: 'POST',
         headers: {

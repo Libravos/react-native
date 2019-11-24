@@ -20,6 +20,19 @@ export default class AuthLoadingScreen extends React.Component {
           this.setState({userToken: user.signInUserSession.accessToken.jwtToken})
         })
         .catch(err => console.log(err))
+        /*if(this.state.userToken){
+            let userProfile;
+            Auth.currentAuthenticatedUser({
+                bypassCache: false  // Optional, By default is false. If set to true, this call will send a request to Cognito to get the latest user data
+            }).then(user =>
+            {
+            console.log(user.attributes.phone_number)
+            userProfile = user.attributes.phone_number;
+            })
+            .catch(err => console.log(err));
+            this.props.navigation.navigate('App',{phone_number,userProfile})
+        }
+        else*/
         this.props.navigation.navigate(this.state.userToken ? 'App' : 'Auth')
     }
 
